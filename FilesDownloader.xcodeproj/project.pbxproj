@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D32BEAE15C2766500D2B414 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D32BEAD15C2766500D2B414 /* Cocoa.framework */; };
+		2D32BEB815C2766600D2B414 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D32BEB615C2766600D2B414 /* InfoPlist.strings */; };
+		2D32BEBA15C2766600D2B414 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D32BEB915C2766600D2B414 /* main.m */; };
+		2D32BEBE15C2766600D2B414 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2D32BEBC15C2766600D2B414 /* Credits.rtf */; };
+		2D32BEC115C2766600D2B414 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D32BEC015C2766600D2B414 /* DKAppDelegate.m */; };
+		2D32BEC415C2766700D2B414 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D32BEC215C2766700D2B414 /* MainMenu.xib */; };
+		2DD403D515C3216B00988A82 /* DKDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD403D415C3216B00988A82 /* DKDownloadOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D32BEA915C2766500D2B414 /* FilesDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilesDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D32BEAD15C2766500D2B414 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2D32BEB015C2766500D2B414 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2D32BEB115C2766500D2B414 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2D32BEB215C2766500D2B414 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2D32BEB515C2766600D2B414 /* FilesDownloader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FilesDownloader-Info.plist"; sourceTree = "<group>"; };
+		2D32BEB715C2766600D2B414 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2D32BEB915C2766600D2B414 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D32BEBB15C2766600D2B414 /* FilesDownloader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FilesDownloader-Prefix.pch"; sourceTree = "<group>"; };
+		2D32BEBD15C2766600D2B414 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2D32BEBF15C2766600D2B414 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
+		2D32BEC015C2766600D2B414 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
+		2D32BEC315C2766700D2B414 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2DD403D315C3216B00988A82 /* DKDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKDownloadOperation.h; sourceTree = "<group>"; };
+		2DD403D415C3216B00988A82 /* DKDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKDownloadOperation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D32BEA615C2766500D2B414 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D32BEAE15C2766500D2B414 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D32BE9E15C2766300D2B414 = {
+			isa = PBXGroup;
+			children = (
+				2D32BEB315C2766600D2B414 /* FilesDownloader */,
+				2D32BEAC15C2766500D2B414 /* Frameworks */,
+				2D32BEAA15C2766500D2B414 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D32BEAA15C2766500D2B414 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D32BEA915C2766500D2B414 /* FilesDownloader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D32BEAC15C2766500D2B414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D32BEAD15C2766500D2B414 /* Cocoa.framework */,
+				2D32BEAF15C2766500D2B414 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D32BEAF15C2766500D2B414 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D32BEB015C2766500D2B414 /* AppKit.framework */,
+				2D32BEB115C2766500D2B414 /* CoreData.framework */,
+				2D32BEB215C2766500D2B414 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2D32BEB315C2766600D2B414 /* FilesDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				2D32BEBF15C2766600D2B414 /* DKAppDelegate.h */,
+				2D32BEC015C2766600D2B414 /* DKAppDelegate.m */,
+				2D32BEC215C2766700D2B414 /* MainMenu.xib */,
+				2D32BEB415C2766600D2B414 /* Supporting Files */,
+				2DD403D315C3216B00988A82 /* DKDownloadOperation.h */,
+				2DD403D415C3216B00988A82 /* DKDownloadOperation.m */,
+			);
+			path = FilesDownloader;
+			sourceTree = "<group>";
+		};
+		2D32BEB415C2766600D2B414 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D32BEB515C2766600D2B414 /* FilesDownloader-Info.plist */,
+				2D32BEB615C2766600D2B414 /* InfoPlist.strings */,
+				2D32BEB915C2766600D2B414 /* main.m */,
+				2D32BEBB15C2766600D2B414 /* FilesDownloader-Prefix.pch */,
+				2D32BEBC15C2766600D2B414 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D32BEA815C2766500D2B414 /* FilesDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D32BEC715C2766700D2B414 /* Build configuration list for PBXNativeTarget "FilesDownloader" */;
+			buildPhases = (
+				2D32BEA515C2766500D2B414 /* Sources */,
+				2D32BEA615C2766500D2B414 /* Frameworks */,
+				2D32BEA715C2766500D2B414 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FilesDownloader;
+			productName = FilesDownloader;
+			productReference = 2D32BEA915C2766500D2B414 /* FilesDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D32BEA015C2766300D2B414 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 2D32BEA315C2766300D2B414 /* Build configuration list for PBXProject "FilesDownloader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2D32BE9E15C2766300D2B414;
+			productRefGroup = 2D32BEAA15C2766500D2B414 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D32BEA815C2766500D2B414 /* FilesDownloader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D32BEA715C2766500D2B414 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D32BEB815C2766600D2B414 /* InfoPlist.strings in Resources */,
+				2D32BEBE15C2766600D2B414 /* Credits.rtf in Resources */,
+				2D32BEC415C2766700D2B414 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D32BEA515C2766500D2B414 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D32BEBA15C2766600D2B414 /* main.m in Sources */,
+				2D32BEC115C2766600D2B414 /* DKAppDelegate.m in Sources */,
+				2DD403D515C3216B00988A82 /* DKDownloadOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2D32BEB615C2766600D2B414 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D32BEB715C2766600D2B414 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2D32BEBC15C2766600D2B414 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D32BEBD15C2766600D2B414 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2D32BEC215C2766700D2B414 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D32BEC315C2766700D2B414 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D32BEC515C2766700D2B414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2D32BEC615C2766700D2B414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2D32BEC815C2766700D2B414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FilesDownloader/FilesDownloader-Prefix.pch";
+				INFOPLIST_FILE = "FilesDownloader/FilesDownloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2D32BEC915C2766700D2B414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FilesDownloader/FilesDownloader-Prefix.pch";
+				INFOPLIST_FILE = "FilesDownloader/FilesDownloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D32BEA315C2766300D2B414 /* Build configuration list for PBXProject "FilesDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D32BEC515C2766700D2B414 /* Debug */,
+				2D32BEC615C2766700D2B414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D32BEC715C2766700D2B414 /* Build configuration list for PBXNativeTarget "FilesDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D32BEC815C2766700D2B414 /* Debug */,
+				2D32BEC915C2766700D2B414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D32BEA015C2766300D2B414 /* Project object */;
+}
