@@ -69,6 +69,7 @@
     NSOpenPanel *downloadFolderSelectOpenPanel = [NSOpenPanel openPanel];
     [downloadFolderSelectOpenPanel setCanChooseFiles:NO];
     [downloadFolderSelectOpenPanel setCanChooseDirectories:YES];
+    [downloadFolderSelectOpenPanel setCanCreateDirectories:YES];
     
     [downloadFolderSelectOpenPanel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
             
