@@ -16,11 +16,7 @@
 
 @implementation DKAppDelegate
 
-@synthesize window = _window;
-@synthesize urlsArray = _urlsArray;
-@synthesize operationQueue = _operationQueue;
-@synthesize operationsProcessedCount = _operationsProcessedCount;
-@synthesize progressIndicatorVisible = _progressIndicatorVisible;
+
 
 - (void)dealloc
 {
