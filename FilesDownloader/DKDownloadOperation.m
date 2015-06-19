@@ -10,7 +10,7 @@
 #define USE_NSURLConnection_AND_Request 0
 
 @interface DKDownloadOperation ()
-@property (readwrite, retain) NSMutableData *receivedData;
+@property (readwrite, strong) NSMutableData *receivedData;
 
 /* 
  this method checks in download directory
@@ -27,7 +27,7 @@
 @synthesize downloadPath = _downloadPath;
 @synthesize receivedData = _receivedData;
 
-- (id)initWithURL:(NSURL *)url downloadPath:(NSString *)path
+- (instancetype)initWithURL:(NSURL *)url downloadPath:(NSString *)path
 {
     if (self = [super init]) {
         _downloadURL = url;
@@ -38,7 +38,7 @@
         // which we can obtain from downloadURL
         
         //FIXME: if two files have same name then this logic will not work
-        _downloadPath = [[NSString alloc] initWithFormat:@"%@/%@",path,[url lastPathComponent]];
+        _downloadPath = [[NSString alloc] initWithFormat:@"%@/%@",path,url.lastPathComponent];
     }
     
     return self;
@@ -86,18 +86,18 @@
         // so that can be later merged after appending appropriate number
         // conversely by making it a unique path
         
-        NSString *pathWithoutLastPathComponent = [self.downloadPath stringByDeletingLastPathComponent];
+        NSString *pathWithoutLastPathComponent = (self.downloadPath).stringByDeletingLastPathComponent;
         
-        NSString *pathExtension = [self.downloadPath pathExtension];
+        NSString *pathExtension = (self.downloadPath).pathExtension;
         
-        NSString *lastPathComponent = [self.downloadPath lastPathComponent];
-        NSString *fileName = [lastPathComponent stringByDeletingPathExtension];
+        NSString *lastPathComponent = (self.downloadPath).lastPathComponent;
+        NSString *fileName = lastPathComponent.stringByDeletingPathExtension;
         
         // create a new path by appending a new number
         
         NSMutableArray *choppedFileName = [[NSMutableArray alloc] initWithArray:[fileName componentsSeparatedByString:@"_"]];
         
-        NSInteger endIntegerValue = [[choppedFileName lastObject] integerValue];
+        NSInteger endIntegerValue = [choppedFileName.lastObject integerValue];
         
         if (endIntegerValue == 0) 
         {
@@ -110,7 +110,7 @@
             // integer found
             // increase its count by 1
             endIntegerValue = endIntegerValue + 1;
-            [choppedFileName replaceObjectAtIndex:([choppedFileName count] - 1) withObject:[[NSString alloc] initWithFormat:@"%d",endIntegerValue]];
+            choppedFileName[(choppedFileName.count - 1)] = [[NSString alloc] initWithFormat:@"%ld",(long)endIntegerValue];
         }
         
         // merge all components

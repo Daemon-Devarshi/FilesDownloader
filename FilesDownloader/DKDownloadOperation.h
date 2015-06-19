@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DKDownloadOperation : NSOperation
-@property (readwrite, retain) NSURL *downloadURL;
-@property (readwrite, retain) NSString *downloadPath;
+@property (readwrite, strong) NSURL *downloadURL;
+@property (readwrite, strong) NSString *downloadPath;
 
 // designated initializer
-- (id)initWithURL:(NSURL *)url downloadPath:(NSString *)path;
+- (instancetype)initWithURL:(NSURL *)url downloadPath:(NSString *)path NS_DESIGNATED_INITIALIZER;
 @end

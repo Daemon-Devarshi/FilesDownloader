@@ -11,9 +11,9 @@
 
 @interface DKAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (readwrite, retain) NSMutableArray *urlsArray;
-@property (assign) NSInteger operationsProcessedCount;
+@property (unsafe_unretained) IBOutlet NSWindow *window;
+@property (readwrite, strong) NSMutableArray *urlsArray;
+
 @property (assign, getter = isProgressIndicatorVisible) BOOL progressIndicatorVisible; 
 
 

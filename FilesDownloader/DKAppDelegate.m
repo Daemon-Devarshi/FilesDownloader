@@ -11,18 +11,14 @@
 
 
 @interface DKAppDelegate ()
-@property (readwrite, retain) NSOperationQueue *operationQueue;
+@property (readwrite, strong) NSOperationQueue *operationQueue;
+@property (assign) NSInteger operationsProcessedCount;
 @end
 
 @implementation DKAppDelegate
 
 
 
-- (void)dealloc
-{
-    [_urlsArray release];
-    [super dealloc];
-}
 	
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -35,7 +31,7 @@
     // initializing operation queue
     if (!self.operationQueue) {
         _operationQueue = [[NSOperationQueue alloc] init];
-        [self.operationQueue setMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
+        (self.operationQueue).maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
     }
     [self.operationQueue cancelAllOperations];
     
@@ -73,7 +69,7 @@
         {
             // ok button selected
             // save path in standard user default
-            [[NSUserDefaults standardUserDefaults] setValue:[[[downloadFolderSelectOpenPanel URLs] lastObject] path] forKey:@"downloadFolderPath"];
+            [[NSUserDefaults standardUserDefaults] setValue:downloadFolderSelectOpenPanel.URLs.lastObject.path forKey:@"downloadFolderPath"];
         }
     }];
 }
@@ -85,7 +81,7 @@
         // so increase operationsProcessedCount by 1
         self.operationsProcessedCount = self.operationsProcessedCount + 1;
         
-        if (self.operationsProcessedCount == [self.urlsArray count]) {
+        if (self.operationsProcessedCount == (self.urlsArray).count) {
             // all operations completed
             self.progressIndicatorVisible = NO;
         }
